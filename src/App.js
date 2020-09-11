@@ -5,21 +5,30 @@ import SinglePostPage from './pages/Feed/SinglePost/SinglePost';
 import './App.css';
 
 class App extends Component {
-  
-  render() {
-    let routes = (
-      <Switch>
-        <Route
-          path="/"
-          exact
-          render={props => (
-            <SinglePostPage
-            />
-          )}
-        />
-      </Switch>
+routes = (
+        <Switch>
+          <Route
+            path="/"
+            exact
+            render={props => (
+              <FeedPage userId={this.state.userId} token={this.state.token} />
+            )}
+          />
+          <Route
+            path="/:postId"
+            render={props => (
+              <SinglePostPage
+                {...props}
+                userId={this.state.userId}
+                token={this.state.token}
+              />
+            )}
+          />
+          <Redirect to="/" />
+        </Switch>
     );
     return (
+      <Fragment>
         {routes}
       </Fragment>
     );
