@@ -1,5 +1,5 @@
-# Social-Feeds-Front-End
+# Social-Feeds-Front-End 
 
-Front End Part Of Node API Project.
+**Front End For Social Feeds (Node API Project).** 
 
-Project In Progress.
+**Project In Progress.**
